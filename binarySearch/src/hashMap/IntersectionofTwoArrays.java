@@ -6,7 +6,9 @@ import java.util.List;
 
 public class IntersectionofTwoArrays {
 
-//	leetcode 349. Intersection of Two Arrays
+//	leetcode 349. Intersection of Two Array
+//........
+//........
 }
 
 class Solution {
