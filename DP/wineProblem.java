@@ -8,6 +8,8 @@ public class wineProblem {
 		
 		int[] dp=new int[arr.length+1];
 //		dp[0]=0;
+		
+		//////////
 		for(int i=0;i<arr.length+1;i++) {
 			dp[i]=-1;
 		}
