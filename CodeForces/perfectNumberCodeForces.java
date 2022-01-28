@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class perfectNumberCodeForces {
-	
+	// Problem 919B codeforces
+    
 	
 	public static void main(String[] args) {
 		Scanner sc =new Scanner(System.in);
