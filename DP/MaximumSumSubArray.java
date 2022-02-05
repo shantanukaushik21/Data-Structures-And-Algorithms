@@ -8,7 +8,8 @@ public class MaximumSumSubArray {
 		// TODO Auto-generated method stub
 		
 		int[] arr = {3,1,2,-2,1,-1,-100,4};
-		System.out.println(MaxSum(arr));
+//		System.out.println(MaxSum(arr));
+		System.out.println(MaxSumSO(arr));
 
 	}
 	public static int MaxSum(int[] arr) {
@@ -31,6 +32,42 @@ public class MaximumSumSubArray {
 		}
 		System.out.println(Arrays.toString(dp));
 		return maxSumSoFar;
+	}
+	
+	//Space Optimized
+	
+	public static int MaxSumSO(int[] arr) {
+		
+		//BaseCase: when all the element on the array is negative this function would give 0
+		//to fix that we need to consider this case separately;
+		boolean flag=false;
+		int max=Integer.MIN_VALUE;
+		for(int i=0;i<arr.length;i++) {
+			max=Math.max(max, arr[i]);
+			if(arr[i]>=0) {
+				flag=true;
+			}
+		}
+		if(!flag) {
+			return max;
+		}
+		
+		
+		
+		
+		int currSum=0;
+		int MaxSumSoFar=0;
+		
+		for(int i=0;i<arr.length;i++) {
+			currSum+=arr[i];
+			MaxSumSoFar=Math.max(MaxSumSoFar, currSum);
+			if(currSum<0) {
+				currSum=0;
+			}
+		}
+		
+		
+		return MaxSumSoFar;
 	}
 
 }
